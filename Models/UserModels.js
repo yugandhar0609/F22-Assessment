@@ -27,4 +27,5 @@ const userSchema = new mongoose.Schema({
 });
 
 const UserDB = mongoose.model("F22", userSchema);
+
 export default UserDB;
