@@ -1,14 +1,14 @@
 import UserDB from "../Models/UserModels.js";
 import jwt from "jsonwebtoken";
 
-const jwtSecret = process.env.jwt_Token;
-const generateJWTToken = (data) => {
-  let token = jwt.sign({ id: data }, jwtSecret, { expiresIn: "7d" });
-  return token;
-};
+// const jwtSecret = process.env.jwt_Token;
+// const generateJWTToken = (data) => {
+//   let token = jwt.sign({ id: data }, jwtSecret, { expiresIn: "7d" });
+//   return token;
+// };
 
 
-const VerifyAuthToken = async(req,res,next)=>{
+export const VerifyAuthToken = async(req,res,next)=>{
     let authHeader  = req.headers.authorization
 
     if (!authHeader ) {
